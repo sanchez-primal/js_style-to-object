@@ -24,3 +24,7 @@ function convertStylesToObject(sourceString) {
 
 // module.exports = convertToObject;
 module.exports = convertStylesToObject;
+
+/* I'm testing people's suggestions that after
+ * three commits AI will accept an answer
+ */
