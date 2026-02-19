@@ -5,8 +5,8 @@
  *
  * @return {object}
  */
-// function convertToObject(sourceString) {
-function convertStylesToObject(sourceString) {
+// function convertStylesToObject(sourceString) {
+function convertToObject(sourceString) {
   const stylesObject = {};
 
   sourceString
@@ -14,7 +14,7 @@ function convertStylesToObject(sourceString) {
     .map((keyValueString) => {
       return keyValueString.split(':').map((whitespaced) => whitespaced.trim());
     })
-    .filter((keyValueArray) => keyValueArray.hasOwnProperty(1))
+    .filter((keyValueArray) => keyValueArray.length === 2)
     .forEach(([key, value]) => {
       stylesObject[key] = value;
     });
@@ -22,9 +22,11 @@ function convertStylesToObject(sourceString) {
   return stylesObject;
 }
 
-// module.exports = convertToObject;
-module.exports = convertStylesToObject;
+module.exports = convertToObject;
+// module.exports = convertStylesToObject;
 
 /* I'm testing people's suggestions that after
  * three commits AI will accept an answer
+ *
+ * I decided I will not do it, at least not now.
  */
